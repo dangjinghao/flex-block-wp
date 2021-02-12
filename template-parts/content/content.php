@@ -2,8 +2,8 @@
             <article>
 
             <?php 
-              $getThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()),full);?>
-             <div class="card-cover" style="background-image: url(<?php echo $getThumbnail[0];?>)"></div>
+              $getThumbnail = wp_get_attachment_image_url( get_post_thumbnail_id(get_the_ID( ) ),full);?>
+             <div class="card-cover" style="background-image: url(<?php echo $getThumbnail;?>)"></div>
               <a class="article-link card-link" href="<?php the_permalink(  )?>" itemprop="url"></a>
               
               <h2 class="article-title"><?php the_title(); ?></h2>

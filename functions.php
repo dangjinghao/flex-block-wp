@@ -1,5 +1,5 @@
 <?php
-function theme_setup() {
+function mytheme_setup() {
     $logo_width  = 280;
     $logo_height = 32;
 
@@ -18,9 +18,11 @@ function theme_setup() {
 
     add_theme_support('post-thumbnails');
 
+     add_theme_support( 'custom-background' ); 
+
 
 }
 
-add_action('after_setup_theme', 'theme_setup');
+add_action('after_setup_theme', 'mytheme_setup');
 
 ?>

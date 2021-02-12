@@ -24,7 +24,10 @@
 
   
 
-    <title><?php bloginfo('name'); ?>-<?php bloginfo('description'); ?></title>
+    <title>
+      <?php if (is_home(  )) {bloginfo('name'); echo '-'; bloginfo('description');}elseif (is_single()){ the_title(  );echo '-' ;bloginfo( 'name' );} 
+      # code...
+     ?></title>
 
 
 
@@ -46,42 +49,30 @@
   <div class="navbar-content">
     <!-- logo -->
     <div class="navbar-logo">
-      <a href="">
+      <a href="<?php bloginfo( 'wpurl' );?>">
         
-          <?php wp_site_icon(  );?>
+          <?php the_custom_logo()?>
         
       </a>
     </div>
     <!-- link -->
+	<!--
     <div class="navbar-link">
+
+	
       <div class="navbar-btn">
         <div></div>
         <div></div>
         <div></div>
+
+	
       </div>
+	  -->
+      <ul class="navbar-list">
+	  <?php wp_nav_menu( array( 'menu' => 'mymenu', 'depth' => 1) );?>
+	  
+
+	</ul>
     </div>
   </div>
 </nav>
-
-    
-<!-- header container -->
-<header class="header-container">
-
-  
-  
-    <div class="header-content ">
-      
-        <div class="post-image" style="background-image: url(https://qiniu.miiiku.xyz/src/images/banner.jpg)"></div>
-      
-      
-      <div class="post-text">
-        <h1 class="title-wrap"><?php bloginfo('name'); ?></h1>
-        
-          <h2 class="title-sub-wrap"><?php bloginfo('description'); ?></h2>
-        
-      </div>
-
-       
-    </div>
- 
-</header>

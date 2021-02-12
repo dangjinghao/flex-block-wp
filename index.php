@@ -1,40 +1,29 @@
 <?php get_header(); ?>
+<!-- header container -->
+<header class="header-container ">
+
+  
+  
+    <div class="header-content ">
+      
+        <div class="post-image" style="background-image: url(<?php echo get_background_image(  );?>)"></div>
+      
+      
+      <div class="post-text">
+        <h1 class="title-wrap"><?php bloginfo('name');?></h1>
 
 
-<body>
-  <div class="root-container">
-    <!-- navbar -->
-<nav class="navbar">
-  <div class="navbar-content">
-    <!-- logo -->
-    <div class="navbar-logo">
-      <a href="<?php bloginfo( 'wpurl' );?>">
         
-          <?php the_custom_logo()?>
+          <h2 class="title-sub-wrap"><?php bloginfo('description'); ?></h2>
         
-      </a>
-    </div>
-    <!-- link -->
-	<!--
-    <div class="navbar-link">
-
-	
-      <div class="navbar-btn">
-        <div></div>
-        <div></div>
-        <div></div>
-
-	
       </div>
-	  -->
-      <ul class="navbar-list">
-	  <?php wp_nav_menu( array( 'menu' => 'mymenu', 'depth' => 1) );?>
-	  
 
-	</ul>
+       
     </div>
-  </div>
-</nav>
+ 
+</header>
+
+
 
     
 
