@@ -5,19 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#3367D6"/>
 
-  <!--
-  
-
-  
-    
-    <meta name="keywords" content="blog">--?>
-  
-
-  
-    <meta name="author" content="captain">
-    <meta name="description" content=<?php bloginfo('description'); ?>>
-
-  -->
   
 
   
@@ -56,7 +43,7 @@
       </a>
     </div>
     <!-- link -->
-	<!--
+	
     <div class="navbar-link">
 
 	
@@ -67,7 +54,7 @@
 
 	
       </div>
-	  -->
+	  
       <ul class="navbar-list">
 	  <?php wp_nav_menu( array( 'menu' => 'mymenu', 'depth' => 1) );?>
 	  

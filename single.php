@@ -73,24 +73,44 @@
   <div class="card-list">
 
     
-      <div id="article-nav-older" class="card-item">
-        <article>
+
+<!-- 相邻文章 -->
         <?php  $prev_post = get_adjacent_post(false, '', true);
+              $last_post = get_adjacent_post(false, '', false);
         if(!empty($prev_post)) {
-          echo '
+          echo '      
+          <div id="article-nav-older" class="card-item img">
+          <article>  
+          <div class="card-cover" style="background-image: url('.wp_get_attachment_image_url( get_post_thumbnail_id($prev_post->ID ),full).')"></div>
           <a class="card-link article-nav-link" href="' . get_permalink($prev_post->ID) . '"></a>
+          <strong class="article-nav-caption">上一篇</strong>
+          <p class="article-nav-title">' . $prev_post->post_title . '</p>
+          </article>'; }
+          
+        if(!empty($last_post)){
+          echo '
+          <div id="article-nav-newer" class="card-item img">
+          <article>  
+          <div class="card-cover" style="background-image: url('.wp_get_attachment_image_url( get_post_thumbnail_id($last_post->ID ),full).')"></div>
+          <a class="card-link article-nav-link" href="' . get_permalink($last_post->ID) . '"></a>
           <strong class="article-nav-caption">下一篇</strong>
-          <p class="article-nav-title">' . $prev_post->post_title . '</p>'; }
-          else {
+          <p class="article-nav-title">' . $last_post->post_title . '</p>
+          </article>'; }
+          
+          if(empty($last_post)&&empty($prev_post)){
             echo '
-            <a class="card-link article-nav-link" href="#"></a>
-            <strong class="article-nav-caption">Older</strong>
-            <p class="article-nav-title">
-              
-                (no title)
-            </p>
-  
-            ';
+            <div id="article-nav-older" class="card-item img">
+            <article>
+            <div class="card-cover" style="background-image: url(https://cloud.miiiku.xyz/src/images/cover/cover-03.jpg)"></div>
+              <a class="card-link article-nav-link" href="#"></a>
+              <strong class="article-nav-caption">没有更多的文章了</strong>
+              <p class="article-nav-title">
+                
+                  请回吧
+                
+              </p>
+            </article>
+          </div>';
           }
 
           ?>

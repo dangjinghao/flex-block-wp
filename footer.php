@@ -2,7 +2,7 @@
     <footer id="footer" class="footer">
   <div class="footer-container">
      
-    <p>&copy;<a href="<?php bloginfo( 'wpurl' );?>" target="_blank"><?php bloginfo('name'); ?></a></p>
+    <p>&copy;<a href="<?php bloginfo( 'wpurl' );?>" target="_self"><?php bloginfo('name'); ?></a></p>
 
     
       <p id="hitokoto"></p>
@@ -11,7 +11,7 @@
 
     
 
-    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+    <p>Powered by <a href="https://wordpress.org" target="_blank" rel="noopener noreferrer">WordPress</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block-wp</a></p>
     
     <!--
     <div class="footer-container__texts">
